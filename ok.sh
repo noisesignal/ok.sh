@@ -811,10 +811,10 @@ status_text: ${status_text}
                 }' 1>&$LSUMMARY ;;
 
             # Remove quotes from the etag header.
-            ETag) val="${val#\"}"; val="${val%\"}" ;;
+            etag) val="${val#\"}"; val="${val%\"}" ;;
 
             # Split the URLs in the Link header into separate pseudo-headers.
-            Link) headers="${headers}$(printf '%s' "$val" | awk '
+            link) headers="${headers}$(printf '%s' "$val" | awk '
                 BEGIN { RS=", "; FS="; "; OFS=": " }
                 {
                     sub(/^rel="/, "", $2); sub(/"$/, "", $2)
