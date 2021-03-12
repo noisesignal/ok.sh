@@ -1,4 +1,4 @@
-#!/usr/bin/env sh
+#!/usr/bin/env bash
 # # A GitHub API client library written in POSIX sh
 #
 # https://github.com/whiteinge/ok.sh
